@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body{
+   background-image: url(../IMG/teclado-mecanico-aukey-2048273.webp);
+   background-color: rgba(0, 0, 0, 0.705);
+   background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+ }
+
+ header{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #F3F5F5;
+ }
+ 
+ header .logo img{
+   width: 50%;
+   padding: 1.5rem;
+ }
+
+ header  nav ul li a {
+  padding: 1rem;
+  list-style: none;
+  color: #F3F5F5;
+  background-color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  
+ }
+
+  header nav ul{
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  main{
+    color: #F3F5F5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  main .contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  main .fotos_pasarela{
+    width: 30%;
+  }
+  
+  main h1, main p{
+    text-align: center;
+    margin-top: 3rem;
+  }
+  main .contenedor-tarjeta{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ }
+ 
+
+ main .tarjeta{
+    background-color: #1A1A1A;
+    padding: 2rem;
+    border-radius: 20px;
+ }
+main .contenedor-tarjeta .tarjeta img{
+    width: 20%;
+    margin-bottom: 1rem;
+ }
+main .contenedor-tarjeta{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .logo img {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  header nav ul li a {
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  main .contenedor {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  main .fotos_pasarela {
+    width: 80%;
+  }
+
+  main h1, main p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+
+  main .contenedor-tarjeta {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  main .contenedor-tarjeta .tarjeta img {
+    width: 40%;
+  }
+
+  main .tarjeta {
+    padding: 1.5rem;
+  }
+
+
+    main .tipo {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  main .contenedor_switch {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+}
+
+}
+
+
+main .tipo{
+  margin: 10rem;
+  padding: 1rem;
+  background-color: #1A1A1A;
+  border-radius: 20px;
+}
+
+main .contenedor_switch{
+  background-color: #1A1A1A;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+
