@@ -1,0 +1,196 @@
+$blanco: #F3F5F5;
+$negro: #000;
+$gris-oscuro: #1A1A1A;
+
+$padding-base: 1rem;
+$radio-base: 20px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin dark-box {
+  background-color: $gris-oscuro;
+  padding: $padding-base * 2;
+  border-radius: $radio-base;
+}
+
+%no-list-style {
+  list-style: none;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../IMG/teclado-mecanico-aukey-2048273.webp);
+  background-color: rgba(0, 0, 0, 0.705);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  @include flex-center;
+  justify-content: space-between;
+  background-color: $blanco;
+
+  .logo img {
+    width: 50%;
+    padding: $padding-base * 1.5;
+  }
+
+  nav {
+    ul {
+      @extend %no-list-style;
+      margin-right: $padding-base;
+
+      li {
+        a {
+          padding: $padding-base;
+          @extend %no-list-style;
+          color: $blanco;
+          background-color: $negro;
+          border-radius: $radio-base;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+}
+
+
+main {
+  color: $blanco;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  padding: $padding-base * 2;
+  gap: $padding-base;
+
+  .contenedor {
+    @include flex-center;
+    margin-top: $padding-base * 3;
+  }
+
+  .fotos_pasarela {
+    width: 30%;
+  }
+
+  h1,
+  p {
+    margin-top: $padding-base * 3;
+  }
+
+  .contenedor-tarjeta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: $padding-base;
+
+    .tarjeta {
+      @include dark-box;
+
+      img {
+        width: 20%;
+        margin-bottom: $padding-base;
+      }
+    }
+  }
+
+  .tipo {
+    margin: $padding-base * 10;
+    padding: $padding-base;
+    background-color: $gris-oscuro;
+    border-radius: $radio-base;
+  }
+
+  .contenedor_switch {
+    background-color: $gris-oscuro;
+    padding: $padding-base;
+    border-radius: $radio-base;
+  }
+}
+
+
+
+//Media para pantallas chicas
+
+@media screen and (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    .logo img {
+      width: 80%;
+      padding: $padding-base;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+
+      li a {
+        margin: 0.5rem 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  main {
+    padding: $padding-base;
+
+    .contenedor {
+      flex-direction: column;
+      margin-top: $padding-base * 2;
+    }
+
+    .fotos_pasarela {
+      width: 80%;
+    }
+
+    h1,
+    p {
+      margin-top: $padding-base * 2;
+      font-size: 1.2rem;
+    }
+
+    .contenedor-tarjeta {
+      grid-template-columns: 1fr;
+
+      .tarjeta img {
+        width: 40%;
+      }
+
+      .tarjeta {
+        padding: $padding-base * 1.5;
+      }
+    }
+
+    .tipo {
+      margin: 2rem 1rem;
+      padding: $padding-base;
+      border-radius: 15px;
+    }
+
+    .contenedor_switch {
+      padding: $padding-base;
+      border-radius: 15px;
+    }
+  }
+}
+
